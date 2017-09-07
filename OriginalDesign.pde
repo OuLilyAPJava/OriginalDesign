@@ -1,8 +1,8 @@
 //bouncingBall
 int ballX = 0;
 int ballY = 0;
-int ballSpeedX = 6;
-int ballSpeedY = 3;
+int ballSpeedX = 10;
+int ballSpeedY = 8;
 int ballRadius = 100;
 void setup()
 {
@@ -16,6 +16,7 @@ void draw()
   ballY = ballY + ballSpeedY;
   background(0, 0, 0);
   ball(ballX, ballY, ballRadius);
+  design(ballX, ballY, ballRadius);
   if(ballX - ballRadius < 0)
   {
     ballSpeedX = - ballSpeedX;
@@ -40,6 +41,12 @@ void draw()
 }
 void ball(int ballX, int ballY, int ballRadius)
 {
-  fill(255, 0, 0);
+  fill(0, 0, 255);
   ellipse(ballX, ballY, 2 * ballRadius, 2 * ballRadius); 
 }
+void design(int ballX, int ballY, int ballRadius)
+{
+  fill(0, 0, 0);
+  ellipse(ballX, ballY, 1.5 * ballRadius, 1.5 * ballRadius);
+}
+  
